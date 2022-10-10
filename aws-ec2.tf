@@ -5,7 +5,7 @@ resource "aws_instance" "first_ec2" {
     tags     = {
         name = "Web-server-terraform"
     }
-    user_data = file("files/server-script.sh")
+    user_data = file("./files/server-script.sh")
 
     security_groups = [aws_security_group.web_traffic.name]
 }
