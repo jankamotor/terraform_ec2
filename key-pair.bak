@@ -1,0 +1,4 @@
+resource "aws_key_pair" "demo-kp"{
+    key_name    = "jc-key"
+    public_key  = "ssh-rsa blablaba"
+}
