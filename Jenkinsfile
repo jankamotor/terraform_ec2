@@ -4,7 +4,7 @@ pipeline {
     skipDefaultCheckout(true)
   }
   stages{
-    stage('clean workspace') {
+    stage('clean workspace-1') {
       steps {
         cleanWs()
       }
