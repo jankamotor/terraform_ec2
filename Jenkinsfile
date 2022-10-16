@@ -4,17 +4,27 @@ pipeline {
     skipDefaultCheckout(true)
   }
   stages{
-    stage('clean workspace-1') {
+    stage('Clean workspace-1...') {
       steps {
         cleanWs()
       }
     }
-    stage('checkout') {
+    stage('Checkout scm...') {
       steps {
         checkout scm
       }
     }
-    stage('terraform') {
+
+    stage('terraform plan...') {
+      steps {
+        dir('/home/jrivas/proyects/terraform_ec2') {
+            sh 'terraform plan'
+        }
+        
+      }
+    }
+
+    stage('terraform apply...') {
       steps {
         dir('/home/jrivas/proyects/terraform_ec2') {
             sh 'terraform apply --auto-approve'
