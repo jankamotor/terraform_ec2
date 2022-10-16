@@ -16,7 +16,7 @@ pipeline {
     }
     stage('terraform') {
       steps {
-        sh 'terraform apply --auto-approve /home/jrivas/proyects/terraform_ec2'
+        sh 'terraform apply --auto-approve /home/jrivas/proyects/terraform_ec2/main.tf'
       }
     }
   }
