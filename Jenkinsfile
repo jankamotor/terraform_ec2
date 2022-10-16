@@ -16,7 +16,7 @@ pipeline {
     }
     stage('terraform') {
       steps {
-        sh '.~/jrivas/proyects/terraform_ec2/terraform apply -auto-approve -no-color'
+        sh '/home/jrivas/proyects/terraform_ec2/terraform apply -auto-approve -no-color'
       }
     }
   }
